@@ -14,8 +14,16 @@ public class Card {
     private int value;
 
     public Card(String suit, int value) {
+        if(suit.toUpperCase().equals("HEARTS")||suit.toUpperCase().equals("DIAMOND")||suit.toUpperCase().equals("CLUBS")||suit.toUpperCase().equals("SPADES")){
         this.suit = suit;
+        }else{
+            System.out.println("That is not a type of card!");
+        }
+        if(value>= 1 && value<=13){
         this.value = value;
+        }else{
+            System.out.println("That is not a type of card number!");
+        }
     }
 
     /**
